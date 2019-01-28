@@ -13,8 +13,6 @@ environment_variables:
       database-stack.yml
     CONFIG_FILES: |
       config-prod.json
-      config-test.json
-      config-uat.json
 
 phases:
   install:

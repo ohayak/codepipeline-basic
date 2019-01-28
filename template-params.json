@@ -1,0 +1,26 @@
+[
+  {
+  "ParameterKey": "CFTemplateRepoName",
+  "ParameterValue": "cfn-nested-repo"
+  },
+  {
+  "ParameterKey": "ProdTopic",
+  "ParameterValue": "cfnstackname-ProdTopic-a2b3r1nd0m"
+  },
+  {
+  "ParameterKey": "ArtifactStoreS3Location",
+  "ParameterValue": "cfnstackname-S3Bucket-r1nd0m3h2s"
+  },
+  {
+  "ParameterKey": "CodeBuildEnvType",
+  "ParameterValue": "LINUX_CONTAINER"
+  },
+  {
+  "ParameterKey": "CodeBuildEnvComputeType",
+  "ParameterValue": "BUILD_GENERAL1_SMALL"
+  },
+  {
+  "ParameterKey": "CodeBuildEnvImage",
+  "ParameterValue": "aws/codebuild/nodejs:7.0.0"
+  }
+]
