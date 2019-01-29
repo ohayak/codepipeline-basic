@@ -10,6 +10,17 @@ Parameters:
   ArtifactS3Location:
     Type: String
     Description: Name of the S3 bucket to store CodePipeline artificat.
+  CodeBuildEnvType:
+    Type: String
+    Default: LINUX_CONTAINER
+    Description: Code Build machine OS
+  CodeBuildEnvComputeType:
+    Type: String
+    Default: BUILD_GENERAL1_SMALL
+    Description: Code build Machine type
+  CodeBuildEnvImage:
+    Type: String
+    Description: Code build environment
 
 Resources:
   CodePipelineRole:
@@ -358,9 +369,9 @@ Resources:
         Name:
           Fn::Sub: Build-${AWS::StackName}
       Environment:
-        Type: LINUX_CONTAINER
-        ComputeType: BUILD_GENERAL1_SMALL
-        Image: aws/codebuild/nodejs:7.0.0
+        Type: ${CodeBuildEnvType}
+        ComputeType: ${CodeBuildEnvComputeType}
+        Image: ${CodeBuildEnvImage}
         EnvironmentVariables:
           - Name: TEMPLATE_BUCKET
             Value:
