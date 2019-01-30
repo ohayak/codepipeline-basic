@@ -372,6 +372,7 @@ Resources:
         Type: ${CodeBuildEnvType}
         ComputeType: ${CodeBuildEnvComputeType}
         Image: ${CodeBuildEnvImage}
+        PrivilegedMode: true
         EnvironmentVariables:
           - Name: TEMPLATE_BUCKET
             Value:
